@@ -21,6 +21,7 @@ import { ClientGroupsComponent } from './client-groups/client-groups.component';
     ClientDashboardComponent,
     CounsellorOptionsComponent,
     ClientGroupsComponent
+  
   ],
   imports: [
     BrowserModule,
