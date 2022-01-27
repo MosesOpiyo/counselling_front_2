@@ -38,7 +38,7 @@ export class AccountService {
       sessionStorage.setItem('token', res['token'])
       this.auth.authentication(true)
       this.snackbar.open(`Welcome back counsellor `,"Dismiss")
-      this.route.navigate(['dashboard'])
+      this.route.navigate(['counsellor_dashboard'])
     },error=>{
       this.snackbar.open(`There was a problem logging you in, please check your credentials and try again.`,"Dismiss",{duration:3000})
       console.log(error)
