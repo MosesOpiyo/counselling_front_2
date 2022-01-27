@@ -14,6 +14,7 @@ import { CounsellorOptionsComponent } from './counsellor-options/counsellor-opti
 import { ClientGroupsComponent } from './client-groups/client-groups.component';
 import { CounsellorLoginComponent } from './counsellor-login/counsellor-login.component';
 import { CounsellorRegistrationComponent } from './counsellor-registration/counsellor-registration.component';
+import { CounsellorDashboardComponent } from './counsellor-dashboard/counsellor-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CounsellorRegistrationComponent } from './counsellor-registration/couns
     CounsellorOptionsComponent,
     ClientGroupsComponent,
     CounsellorLoginComponent,
-    CounsellorRegistrationComponent
+    CounsellorRegistrationComponent,
+    CounsellorDashboardComponent
   
   ],
   imports: [
