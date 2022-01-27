@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from '../accountservice/accountservice.service';
 
 @Component({
   selector: 'app-client-groups',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientGroupsComponent implements OnInit {
 
-  constructor() { }
+  user:any
+  constructor(private accountservice:AccountService) { }
+
+  logout(){
+    this.accountservice.logout()
+  }
 
   ngOnInit(): void {
+    this.accountservice.counsellor_profile().subscribe((response:any)=>{
+      this.user = response['user']
+    })
   }
+
 
 }
