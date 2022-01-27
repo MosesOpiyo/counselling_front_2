@@ -18,22 +18,23 @@
     <div class="container mt-5 pt-5">
         <div class="row g-0">
             <div class="col-lg-5">
-                <h2 class="clo-lg-5 text-center py-5">Sign up</h2>
-                <h4 class="clo-lg-5 text-center py-1" style="color: black;">Sign in, get help,dont struggle alone</h4>
-                <form #registerForm='ngForm' (ngSubmit)="signUp()">
-                    <input type="text" id="username" [(ngModel)]="username" class="form-control" name="username" placeholder="username">
+                <h2 class="clo-lg-5 text-center py-5">Login</h2>
+                <h4 class="clo-lg-5 text-center py-2" style="color: black;">Welcome back. Back to positivity</h4>
+                <form #loginForm="ngForm" (ngSubmit)="loginUser()">
+                    <input id="email" name="email" placeholder="email" [(ngModel)]="email" class="form-control form-control" type="email" required>
                     <br>
-                    <input type="email" id="email" [(ngModel)]="email" class="form-control" name="email" placeholder="email">
+                    <input input id="password" name="password" [(ngModel)]="password" placeholder="enter your password" class="form-control" type="password" required>
                     <br>
-                    <input type="password" id="password " [(ngModel)]="password" class="form-control" name="password" placeholder="password">
-                    <br>
-                    <button class="btn btn-succes" type="submit ">Sign up</button>
-                    <p class="clo-lg-5 text-center py-5">Have an account?<br><a routerLink="login">Login</a></p>
+                    <button class="btn btn-succes" type="submit">Login</button>
+                    <p class="clo-lg-5 text-center py-5 ">Have an account?<br><a routerLink="sign_up">Sign up</a></p>
+
                 </form>
             </div>
             <div class="col-lg-5">
-                <img src="https://github.com/MosesOpiyo/counselling_front/blob/ft/moses/src/assets/images/therapy2.jpg?raw=true" class="img-fluid " alt=" ">
+                <img src="https://github.com/MosesOpiyo/counselling_front/blob/ft/moses/src/assets/images/therapy2.jpg?raw=true" class="img-fluid" alt="">
             </div>
         </div>
     </div>
+
+
 </div>
