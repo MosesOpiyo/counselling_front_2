@@ -17,6 +17,7 @@ import { CounsellorRegistrationComponent } from './counsellor-registration/couns
 import { CounsellorDashboardComponent } from './counsellor-dashboard/counsellor-dashboard.component';
 import { CounsellorGroupsComponent } from './counsellor-groups/counsellor-groups.component';
 import { CounsellorClientsComponent } from './counsellor-clients/counsellor-clients.component';
+import { GroupFormComponent } from './group-form/group-form.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CounsellorClientsComponent } from './counsellor-clients/counsellor-clie
     CounsellorRegistrationComponent,
     CounsellorDashboardComponent,
     CounsellorGroupsComponent,
-    CounsellorClientsComponent
+    CounsellorClientsComponent,
+    GroupFormComponent
   
   ],
   imports: [
