@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
 import { CounsellorOptionsComponent } from './counsellor-options/counsellor-options.component';
+import { ClientGroupsComponent } from './client-groups/client-groups.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CounsellorOptionsComponent } from './counsellor-options/counsellor-opti
     SignupComponent,
     LoginComponent,
     ClientDashboardComponent,
-    CounsellorOptionsComponent
+    CounsellorOptionsComponent,
+    ClientGroupsComponent
   ],
   imports: [
     BrowserModule,
