@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
+import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    ClientDashboardComponent
   ],
   imports: [
     BrowserModule,
