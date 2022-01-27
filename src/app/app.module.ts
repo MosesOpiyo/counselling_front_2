@@ -10,13 +10,15 @@ import { SignupComponent } from './signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
+import { CounsellorOptionsComponent } from './counsellor-options/counsellor-options.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
-    ClientDashboardComponent
+    ClientDashboardComponent,
+    CounsellorOptionsComponent
   ],
   imports: [
     BrowserModule,
