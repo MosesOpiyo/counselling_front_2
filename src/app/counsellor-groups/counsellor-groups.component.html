@@ -8,8 +8,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <button class="nav-link active" aria-current="page" style="margin-left: 30px;">Home</button>
-                    <button class="nav-link" routerLink="/dashboard">Activity</button>
+                    <button class="nav-link" routerLink="/counsellor_dashboard">Activity</button>
                     <a class="btn btn-primary">Groups</a>
+                    <button class="nav-link">Clients</button>
                     <button class="nav-link">About</button>
                     <div class="card" style="background-color: black;width: 35px;height: 35px;margin-left: 850px;border-radius: 30px;"></div>
                     <a class="btn btn-danger" routerLink="" (click)="logout()" style="margin-left: 20px;">Logout</a>
@@ -25,7 +26,7 @@
                 </div>
                 <h1 style="margin-top: 7%;">{{user['username']}}</h1>
                 <h3 style="margin-top: 2%;">Date joined: {{user['date_joined'] | date}}</h3>
-                <a class="btn btn-success" style="width: 15pc;" routerLink="/consellor_specifics">Edit Profile</a>
+                <a class="btn btn-success" style="width: 15pc;">Edit Profile</a>
                 <div class="details" style="margin-top: 15%;">
                     <a class="btn btn-info">Details</a>
                     <h1 style="margin-top: 7%;">Clients:</h1>
