@@ -67,6 +67,12 @@ export class AccountService {
     })
     return this.http.get(`${environment.BASE_URL}counsultion/counsellor_profile`,{'headers':headers})
   }
+  createGroup(){
+    let headers = new HttpHeaders({
+      'Authorization':`Token ${sessionStorage.getItem('token')}`
+    })
+    return this.http.post(`${environment.BASE_URL}counsultion/counsellor_group_view`,{'headers':headers})
+  }
   client_profile(){
     let headers = new HttpHeaders({
       'Authorization':`Token ${sessionStorage.getItem('token')}`
