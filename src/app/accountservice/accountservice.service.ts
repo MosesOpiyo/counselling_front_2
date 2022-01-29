@@ -67,11 +67,13 @@ export class AccountService {
     })
     return this.http.get(`${environment.BASE_URL}counsultion/counsellor_profile`,{'headers':headers})
   }
-  createGroup(){
-    let headers = new HttpHeaders({
-      'Authorization':`Token ${sessionStorage.getItem('token')}`
+  createGroup(group:any){
+    return this.http.post(`${environment.BASE_URL}counsultion/counsellor_group_view`,group).subscribe(response=>{
+      this.snackbar.open(`New group ${group.get('name')} has been successfully created`,"Thank you",{duration:3000})
+    },error =>{
+      this.snackbar.open(`There was a problem creating the group`,"Alright",{duration:3000})
+      console.log(error)
     })
-    return this.http.post(`${environment.BASE_URL}counsultion/counsellor_group_view`,{'headers':headers})
   }
   client_profile(){
     let headers = new HttpHeaders({
