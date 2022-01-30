@@ -95,6 +95,12 @@ export class AccountService {
     return this.http.get(`${environment.BASE_URL}counsultion/group_view`,{'headers':headers})
 
   }
+  joinCounsellor(id:number){
+    let headers = new HttpHeaders({
+      'Authorization':`Token ${sessionStorage.getItem('token')}`
+    })
+    return this.http.post(`${environment.BASE_URL}counsultion/join_counsellor/${id}`,id,{"headers":headers})
+  }
   client_profile(){
     let headers = new HttpHeaders({
       'Authorization':`Token ${sessionStorage.getItem('token')}`
