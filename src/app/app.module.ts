@@ -18,6 +18,7 @@ import { CounsellorDashboardComponent } from './counsellor-dashboard/counsellor-
 import { CounsellorGroupsComponent } from './counsellor-groups/counsellor-groups.component';
 import { CounsellorClientsComponent } from './counsellor-clients/counsellor-clients.component';
 import { GroupFormComponent } from './group-form/group-form.component';
+import { SpecificCounsellorComponent } from './specific-counsellor/specific-counsellor.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { GroupFormComponent } from './group-form/group-form.component';
     CounsellorDashboardComponent,
     CounsellorGroupsComponent,
     CounsellorClientsComponent,
-    GroupFormComponent
+    GroupFormComponent,
+    SpecificCounsellorComponent
   
   ],
   imports: [
