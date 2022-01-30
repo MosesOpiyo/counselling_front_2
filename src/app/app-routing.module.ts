@@ -11,6 +11,7 @@ import { CounsellorRegistrationComponent } from './counsellor-registration/couns
 import { GroupFormComponent } from './group-form/group-form.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { SpecificCounsellorComponent } from './specific-counsellor/specific-counsellor.component';
 
 const routes: Routes = [
   {path:'',component:SignupComponent},
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:'counsellor_dashboard',component:CounsellorDashboardComponent},
   {path:'counsellor_groups',component:CounsellorGroupsComponent},
   {path:'counsellors_client',component:CounsellorClientsComponent},
-  {path:'group_form',component:GroupFormComponent}
+  {path:'group_form',component:GroupFormComponent},
+  {path:'counsellor',component:SpecificCounsellorComponent}
 ];
 
 @NgModule({

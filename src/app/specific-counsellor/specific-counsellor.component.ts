@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountService } from '../accountservice/accountservice.service';
 
 @Component({
   selector: 'app-specific-counsellor',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpecificCounsellorComponent implements OnInit {
 
-  constructor() { }
+  user:any
+  counsellors:any
+  constructor(private accountservice:AccountService) { }
 
-  ngOnInit(): void {
+  logout(){
+    this.accountservice.logout()
   }
 
+  ngOnInit(): void {
+    this.accountservice.counsellor_profile().subscribe((response:any)=>{
+      this.user = response['user']
+    })
+    this.accountservice.getCounsellors().subscribe((response:any)=>{
+      this.counsellors = response
+      console.log(this.counsellors)
+    })
+  }
 }
