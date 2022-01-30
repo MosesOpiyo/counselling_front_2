@@ -69,6 +69,12 @@ export class AccountService {
     })
     return this.http.get(`${environment.BASE_URL}counsultion/counsellor_profile`,{'headers':headers})
   }
+  getCounsellors(){
+    let headers = new HttpHeaders({
+      'Authorization':`Token ${sessionStorage.getItem('token')}`
+    })
+    return this.http.get(`${environment.BASE_URL}counsultion/counsellors`,{'headers':headers})
+  }
   createGroup(group:FormGroup){
     let headers = new HttpHeaders({
       'Authorization':`Token ${sessionStorage.getItem('token')}`
@@ -82,6 +88,10 @@ export class AccountService {
     })
   }
   getGroups(){
+    let headers = new HttpHeaders({
+      'Authorization':`Token ${sessionStorage.getItem('token')}`
+    })
+    return this.http.get(`${environment.BASE_URL}counsultion/group_view`,{'headers':headers})
 
   }
   client_profile(){
