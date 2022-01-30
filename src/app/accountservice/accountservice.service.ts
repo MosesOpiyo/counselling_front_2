@@ -5,10 +5,12 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 
 import { environment } from 'src/environments/environment';
 import { AuthService } from '../authservice/authservice.service';
+import { FormGroup } from '@angular/forms';
 @Injectable({
   providedIn: 'root'
 })
 export class AccountService {
+  group:any
 
   constructor(private http:HttpClient, private auth:AuthService, private snackbar:MatSnackBar, private route:Router) { }
 
@@ -67,13 +69,20 @@ export class AccountService {
     })
     return this.http.get(`${environment.BASE_URL}counsultion/counsellor_profile`,{'headers':headers})
   }
-  createGroup(group:any){
-    return this.http.post(`${environment.BASE_URL}counsultion/counsellor_group_view`,group).subscribe(response=>{
-      this.snackbar.open(`New group ${group.get('name')} has been successfully created`,"Thank you",{duration:3000})
+  createGroup(group:FormGroup){
+    let headers = new HttpHeaders({
+      'Authorization':`Token ${sessionStorage.getItem('token')}`
+    })
+
+    this.http.post(`${environment.BASE_URL}counsultion/group_view`,group.value,{'headers':headers}).subscribe(response=>{
+      this.snackbar.open(`New group ${group.value.name} has been successfully created`,"Thank you",{duration:3000})
     },error =>{
       this.snackbar.open(`There was a problem creating the group`,"Alright",{duration:3000})
       console.log(error)
     })
+  }
+  getGroups(){
+
   }
   client_profile(){
     let headers = new HttpHeaders({

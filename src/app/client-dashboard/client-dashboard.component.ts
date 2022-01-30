@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AccountService } from '../accountservice/accountservice.service';
 
 @Component({
@@ -8,8 +9,9 @@ import { AccountService } from '../accountservice/accountservice.service';
 })
 export class ClientDashboardComponent implements OnInit {
   user:any
+  role:any
 
-  constructor(private accountservice:AccountService) { }
+  constructor(private accountservice:AccountService,private route:Router) { }
 
   logout(){
     this.accountservice.logout()
@@ -19,6 +21,7 @@ export class ClientDashboardComponent implements OnInit {
     this.accountservice.counsellor_profile().subscribe((response:any)=>{
       this.user = response['user']
     })
+    
   }
 
 }

@@ -26,14 +26,14 @@
             <h3 style="margin-top:20px;margin-left: 20px;">Create a group</h3>
             <div class="groups" style="border-radius: 20px;width: 95%;margin-left: 20px;height: auto;">
                 <div class="row g-0">
-                    <form #groupForm="ngForm" (ngSubmit)="createGroup()">
+                    <form [formGroup]="groupform" (ngSubmit)="createGroup()">
                         <label style="margin-bottom: 20px;" for="name">Name of group</label>
                         <br>
-                        <input type="text" [(ngModel)]="name" name="name" id="">
+                        <input type="text" formControlName="name" name="name" id="name">
                         <br>
                         <label style="margin-bottom: 20px;" for="bio">Enter group bio</label>
                         <br>
-                        <input type="text" [(ngModel)]="bio" name="bio" id="">
+                        <input type="text" formControlName="bio" name="bio" id="name">
                         <br>
                         <button type="submit" style="margin-bottom: 20px;background-color: rgb(34, 110, 63);" class="btn btn-success">Create</button>
                     </form>

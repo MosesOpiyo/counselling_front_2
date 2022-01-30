@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../accountservice/accountservice.service';
+import { Group } from '../group';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-group-form',
@@ -8,18 +10,20 @@ import { AccountService } from '../accountservice/accountservice.service';
 })
 export class GroupFormComponent implements OnInit {
 
-  constructor(private accountservice:AccountService) { }
-
-  name:any
-  bio:any
+  new_group = new Group("","")
 
   createGroup(){
-    let form = new FormData();
-    form.append('name',this.name)
-    form.append('bio',this.bio)
-    this.accountservice.createGroup(form)
+    console.log(this.groupform)
+    this.accountservice.createGroup(this.groupform)
   }
 
+
+  constructor(private accountservice:AccountService,private fb:FormBuilder) { }
+  groupform = this.fb.group({
+    name:[""],
+    bio:[""]
+  }) 
+  
   ngOnInit(): void {
   }
 
