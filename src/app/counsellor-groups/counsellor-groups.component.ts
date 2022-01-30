@@ -10,6 +10,8 @@ export class CounsellorGroupsComponent implements OnInit {
 
   user:any
   groups:any
+
+
   constructor(private accountservice:AccountService) { }
 
   logout(){
@@ -21,8 +23,11 @@ export class CounsellorGroupsComponent implements OnInit {
     this.accountservice.counsellor_profile().subscribe((response:any)=>{
       this.user = response['user']
     })
+    this.accountservice.counsellor_profile().subscribe((response:any)=>{
+
+    })
     this.accountservice.getGroups().subscribe((response:any)=>{
-      this.user = response['groups']
+      this.groups = response['groups']
     })
     
 

@@ -82,6 +82,7 @@ export class AccountService {
 
     this.http.post(`${environment.BASE_URL}counsultion/group_view`,group.value,{'headers':headers}).subscribe(response=>{
       this.snackbar.open(`New group ${group.value.name} has been successfully created`,"Thank you",{duration:3000})
+      this.route.navigate(['counsellor_groups'])
     },error =>{
       this.snackbar.open(`There was a problem creating the group`,"Alright",{duration:3000})
       console.log(error)
