@@ -45,15 +45,15 @@
             </div>
             <div class="col-lg-8" style="border: 1px solid rgb(218, 217, 217);border-radius: 40px;height: auto;">
                 <h3 style="margin-top:20px;margin-left: 20px;">Groups</h3>
-                <div class="groups" style="border: 1px solid rgb(218, 217, 217);border-radius: 20px;width: 95%;margin-left: 20px;height: auto;">
-                    <div class="row g-0">
+                <div class="groups" style="border: 1px solid rgb(218, 217, 217);border-radius: 20px;width: 95%;margin-left: 20px;height: auto;margin-bottom: 10px;" *ngFor="let group of groups">
+                    <div class="row g-0" style="margin-bottom: 10px;">
                         <div class="col">
-                            <h2 style="margin-left: 10px;margin-top: 10px;">Name</h2>
-                            <h3 style="margin-left: 10px;">Bio</h3>
+                            <h2 style="margin-left: 10px;margin-top: 5px;">{{group['name']}}</h2>
+                            <h4 style="margin-left: 10px;margin-bottom: 10px;">{{group['bio']}}</h4>
+                            <p style="margin-left: 10px;margin-bottom: 10px;">created by: {{group['admin']['username']}}</p>
 
                         </div>
                         <div class="col">
-                            <a style="margin-left: 70%;margin-top: 30px;" class="btn btn-primary">Join Group</a>
                         </div>
                     </div>
                 </div>

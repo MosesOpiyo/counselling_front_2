@@ -49,11 +49,12 @@
                     <div class="row g-0">
                         <div class="row" style="margin-top: 20px;margin-bottom: 20px;">
                             <div class="col-lg-2">
-                                <div class="card" style="width: 70px;height: 70px;background-color: black;border-radius: 50px;"></div>
+                                <div class="card" style="width: 70px;height: 70px;background-color: black;border-radius: 50px;margin-top: 20px;"></div>
                             </div>
                             <div class="col-lg-5" style="margin-top: 15px;">
                                 <h2>{{counsellor['user']['username']}}</h2>
-                                <h3>date_joined: {{counsellor['user']['date_joined'] | date}}</h3>
+                                <p>{{counsellor['user']['email']}}</p>
+                                <p>date_joined: {{counsellor['user']['date_joined'] | date}}</p>
                             </div>
                             <div class="col-lg-7">
 
