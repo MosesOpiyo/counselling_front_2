@@ -29,15 +29,7 @@
                 <a class="btn btn-success" style="width: 15pc;" routerLink="/consellor_specifics">Edit Profile</a>
                 <div class="details" style="margin-top: 15%;">
                     <a class="btn btn-info">Details</a>
-                    <h1 style="margin-top: 7%;">Clients:</h1>
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="card" style="width: 70px;height: 70px;background-color: black;border-radius: 50px;"></div>
-                        </div>
-                        <div class="col-lg-5" style="margin-top: 15px;">
-                            <h3>Name</h3>
-                        </div>
-                    </div>
+                    <h3 style="margin-top: 2%;">{{user['email']}}</h3>
 
 
 
@@ -45,8 +37,8 @@
             </div>
             <div class="col-lg-8" style="border: 1px solid rgb(218, 217, 217);border-radius: 40px;height: auto;">
                 <h3 style="margin-top:20px;margin-left: 20px;">Counsellors</h3>
-                <div class="counsellors" *ngFor="let counsellor of counsellors" style="border: 1px solid rgb(218, 217, 217);border-radius: 20px;width: 95%;margin-left: 20px;height: auto;margin-bottom: 10px;">
-                    <a routerLink="/counsellor" style="text-decoration: none;color: black;">
+                <div class="counsellors" *ngFor="let counsellor of counsellors; let i = index" style="border: 1px solid rgb(218, 217, 217);border-radius: 20px;width: 95%;margin-left: 20px;height: auto;margin-bottom: 10px;">
+                    <a style="text-decoration: none;color: black;">
                         <div class="row g-0">
                             <div class="row" style="margin-top: 20px;margin-bottom: 20px;">
                                 <div class="col-lg-2">
@@ -56,9 +48,11 @@
                                     <h2>{{counsellor['user']['username']}}</h2>
                                     <p>{{counsellor['user']['email']}}</p>
                                     <p>date_joined: {{counsellor['user']['date_joined'] | date}}</p>
+                                    <p>Qualities:{{counsellor['details']['qualities']}}</p>
+                                    <p>Work Experience: {{counsellor['details']['experiences']}}</p>
                                 </div>
-                                <div class="col-lg-7">
-
+                                <div class="col-lg-5">
+                                    <button class="btn btn-success" (click)="join_counsellor(counsellor[ 'id'])" style="background-color: green;margin-top: 15px;">Get in contact</button>
                                 </div>
                             </div>
 

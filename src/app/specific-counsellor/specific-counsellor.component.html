@@ -24,23 +24,13 @@
                 <div class="card" style="width: 15pc;height:15pc;border-radius: 50%;background-color: black;">
 
                 </div>
-                <h1 style="margin-top: 7%;">{{user['username']}}</h1>
-                <h3 style="margin-top: 2%;">{{user['email']}}</h3>
-                <h3 style="margin-top: 2%;">Date joined: {{user['date_joined'] | date}}</h3>
+                <h1 style="margin-top: 7%;">{{counsellor['user']['username']}}</h1>
+                <h3 style="margin-top: 2%;">{{counsellor['user']['email']}}</h3>
+                <h3 style="margin-top: 2%;">Date joined: {{counsellor['user']['date_joined'] | date}}</h3>
                 <a class="btn btn-primary" style="width: 15pc;">Get in touch</a>
                 <div class="details" style="margin-top: 15%;">
-                    <a class="btn btn-info">Details</a>
-                    <h1 style="margin-top: 7%;">Clients:</h1>
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="card" style="width: 70px;height: 70px;background-color: black;border-radius: 50px;"></div>
-                        </div>
-                        <div class="col-lg-5" style="margin-top: 15px;">
-                            <h3>Name</h3>
-                        </div>
-                    </div>
-
-
+                    <a class="btn btn-info">Reminder</a>
+                    <h3 style="margin-top: 7%;">This is your counsellor.They are here <br>to help you through your journey <br> to subjective wellbeing</h3>
 
                 </div>
             </div>
@@ -68,7 +58,7 @@
                 </div>
                 <div class="counsellor-groups">
                     <h1 style="margin-left: 30px;">Groups</h1>
-                    <div class="groups" style="border: 1px solid black;width: 95%;margin-left: 20px;height: auto;border-radius: 20px;">
+                    <div class="groups" style="border: 1px solid rgb(218, 217, 217);width: 95%;margin-left: 20px;height: auto;border-radius: 20px;">
                         <h3 style="margin-left: 20px;">Name</h3>
                         <h3 style="margin-left: 20px;">Bio</h3>
                         <p style="margin-left: 20px;">admin</p>

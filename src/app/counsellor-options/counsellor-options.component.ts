@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { AccountService } from '../accountservice/accountservice.service';
+
 
 @Component({
   selector: 'app-counsellor-options',
@@ -10,7 +13,19 @@ export class CounsellorOptionsComponent implements OnInit {
 
   user:any
   counsellors:any
-  constructor(private accountservice:AccountService) { }
+  counsellor:any
+
+  join_counsellor(id:number){
+    this.accountservice.joinCounsellor(id).subscribe(response =>{
+      this.matsnackbar.open(`Congratulations you now have a mentor through this journey`,"Thank you",{duration:3000})
+      console.log(response)
+      this.ngOnInit();
+    },error=>{
+      console.log(error)
+    })
+   }
+
+  constructor(private accountservice:AccountService,private route:Router,private matsnackbar:MatSnackBar) { }
 
   logout(){
     this.accountservice.logout()
@@ -22,7 +37,17 @@ export class CounsellorOptionsComponent implements OnInit {
     })
     this.accountservice.getCounsellors().subscribe((response:any)=>{
       this.counsellors = response
-      console.log(this.counsellors)
+    
+    })
+    this.accountservice.clientsCounsellor().subscribe((response:any)=>{
+      this.counsellor = response["counsellor"]
+      
+      if(this.counsellor == null){
+        this.route.navigate(['counsellor_options'])
+      }
+      if(this.counsellor != null){
+        this.route.navigate(['counsellor'])
+      }
     })
   }
 
