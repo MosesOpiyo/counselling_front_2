@@ -1,0 +1,84 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="font-family:Reggae One;" href="#">Consultation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <button class="nav-link active" aria-current="page" style="margin-left: 30px;">Home</button>
+                    <button class="nav-link" routerLink="/client_dashboard">Activity</button>
+                    <button class="nav-link" routerLink="/client_groups">Groups</button>
+                    <a class="btn btn-primary">Counsellors</a>
+                    <button class="nav-link">About</button>
+                    <div class="card" style="background-color: black;width: 35px;height: 35px;margin-left: 850px;border-radius: 30px;"></div>
+                    <a class="btn btn-danger" routerLink="" (click)="logout()" style="margin-left: 20px;">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5 pt-5">
+        <div class="row g-0">
+            <div class="col-lg-3">
+                <div class="card" style="width: 15pc;height:15pc;border-radius: 50%;background-color: black;">
+
+                </div>
+                <h1 style="margin-top: 7%;">{{user['username']}}</h1>
+                <h3 style="margin-top: 2%;">{{user['email']}}</h3>
+                <h3 style="margin-top: 2%;">Date joined: {{user['date_joined'] | date}}</h3>
+                <a class="btn btn-primary" style="width: 15pc;">Get in touch</a>
+                <div class="details" style="margin-top: 15%;">
+                    <a class="btn btn-info">Details</a>
+                    <h1 style="margin-top: 7%;">Clients:</h1>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="card" style="width: 70px;height: 70px;background-color: black;border-radius: 50px;"></div>
+                        </div>
+                        <div class="col-lg-5" style="margin-top: 15px;">
+                            <h3>Name</h3>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="col-lg-8" style="border: 1px solid rgb(218, 217, 217);border-radius: 40px;height: auto;">
+                <h3 style="margin-top:20px;margin-left: 30px;">Counsellor</h3>
+                <div class="counsellor-details">
+                    <div class="row g-0" style=" height:30vh">
+                        <div class="col-lg-5" style="margin-left: 35px;height: auto;">
+                            <div class="card">
+                                <h2 style="margin-left: 20px;">Qualities</h2>
+                                <hr style="width: 90%;margin-left: 10px;">
+                                <p style="margin-left: 5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                                    make a type specimen book. </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5" style="margin-left: 20px;height: auto;">
+                            <div class="card">
+                                <h2 style="margin-left: 20px;">Work Experience</h2>
+                                <hr style="width: 90%;margin-left: 10px">
+                                <p style="margin-left: 5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                                    make a type specimen book. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="counsellor-groups">
+                    <h1 style="margin-left: 30px;">Groups</h1>
+                    <div class="groups" style="border: 1px solid black;width: 95%;margin-left: 20px;height: auto;border-radius: 20px;">
+                        <h3 style="margin-left: 20px;">Name</h3>
+                        <h3 style="margin-left: 20px;">Bio</h3>
+                        <p style="margin-left: 20px;">admin</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="font-family:Reggae One;" href="#">Consultation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" style="margin-left: 30px;" routerLink="">Login</a>
+                    <a class="nav-link" routerLink="/sign_up">Sign up</a>
+                    <a class="nav-link" routerLink="/3">Are you a consultant?</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5 pt-5">
+        <div class="row g-0">
+            <div class="col-lg-5">
+                <h2 class="clo-lg-5 text-center py-5">Become a counselor</h2>
+                <h4 class="clo-lg-5 text-center py-2" style="color: black;">The manner of gift giving is priceless.<br> Help clients in need of your gift</h4>
+                <form #registerForm='ngForm' (ngSubmit)="signUp()">
+                    <input style="margin-bottom: 50px;" [(ngModel)]="username" type="text" id="username" class="form-control" name="username" placeholder="username">
+                    <br>
+                    <input style="margin-bottom: 50px;" [(ngModel)]="email" id="email" name="email" placeholder="email" class="form-control form-control" type="email" required>
+                    <br>
+                    <input style="margin-bottom: 50px;" [(ngModel)]="password" input id="password" name="password" placeholder="enter your password" class="form-control" type="password" required>
+                    <br>
+                    <button class="btn btn-succes" type="submit">Sign up</button>
+                    <br>
+                    <p class="clo-lg-5 text-center py-5 ">Already a counsellor?<br><a routerLink="/counsellor_login">Login</a></p>
+
+                </form>
+            </div>
+            <div class="col-lg-5">
+                <img src="https://github.com/MosesOpiyo/counselling_front/blob/ft/moses/src/assets/images/pexels-cottonbro-4098368.jpg?raw=true" alt="">
+            </div>
+
+        </div>
+    </div>
+</div>
