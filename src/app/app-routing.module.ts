@@ -12,6 +12,7 @@ import { GroupFormComponent } from './group-form/group-form.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { SpecificCounsellorComponent } from './specific-counsellor/specific-counsellor.component';
+import { SpecificGroupComponent } from './specific-group/specific-group.component';
 
 const routes: Routes = [
   {path:'',component:SignupComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'counsellor_groups',component:CounsellorGroupsComponent},
   {path:'counsellors_client',component:CounsellorClientsComponent},
   {path:'group_form',component:GroupFormComponent},
-  {path:'counsellor',component:SpecificCounsellorComponent}
+  {path:'counsellor',component:SpecificCounsellorComponent},
+  {path:'group',component:SpecificGroupComponent}
 ];
 
 @NgModule({

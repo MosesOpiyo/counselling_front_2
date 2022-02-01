@@ -113,6 +113,31 @@ export class AccountService {
     })
     return this.http.get(`${environment.BASE_URL}counsultion/client_profile`,{'headers':headers})
   }
+  get_client_group(){
+    let headers = new HttpHeaders({
+      'Authorization':`Token ${sessionStorage.getItem('token')}`
+    })
+    return this.http.get(`${environment.BASE_URL}counsultion/client_group`,{'headers':headers})
+  }
+  joinGroup(id:number){
+    let headers = new HttpHeaders({
+      'Authorization':`Token ${sessionStorage.getItem('token')}`
+    })
+    return this.http.post(`${environment.BASE_URL}counsultion/join_group/${id}`,id,{'headers':headers})
+  }
+  postGroupMessages(body:any,pk:any){
+    let headers = new HttpHeaders({
+      'Authorization':`Token ${sessionStorage.getItem('token')}`
+      })
+    return this.http.post(`${environment.BASE_URL}counsultion/group_chat/${pk}`,body,{"headers":headers})
+  }
+  getGroupMessages(pk:any){
+    let headers = new HttpHeaders({
+      'Authorization':`Token ${sessionStorage.getItem('token')}`
+      })
+    return this.http.get(`${environment.BASE_URL}counsultion/group_chat/${pk}`,{"headers":headers})  
+
+  }
   logout(){
     sessionStorage.removeItem('token')
     this.auth.authentication(false)

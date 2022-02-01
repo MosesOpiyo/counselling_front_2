@@ -1,0 +1,8 @@
+<div class="row" style="margin-top: 40px;margin-left: 10px;height: auto;">
+    <form #textForm="ngForm" (ngSubmit)="postMessage()">
+        <div class="col">
+            <input type="text" [(ngModel)]="new_text.text" name="text" placeholder="Text">
+            <button class="btn btn-success" style="background-color:#268B6A;margin-left: 10px;">Send</button>
+        </div>
+    </form>
+</div>

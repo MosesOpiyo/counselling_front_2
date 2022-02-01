@@ -26,25 +26,26 @@
                 </div>
                 <h1 style="margin-top: 7%;">{{user['username']}}</h1>
                 <h3 style="margin-top: 2%;">Date joined: {{user['date_joined'] | date}}</h3>
-                <a class="btn btn-success" style="width: 15pc;" routerLink="/consellor_specifics">Edit Profile</a>
 
             </div>
             <div class="col-lg-8" style="border: 1px solid rgb(218, 217, 217);border-radius: 40px;height: auto;">
-                <h3 style="margin-top:20px;margin-left: 20px;">Groups</h3>
-                <div class="groups" style="border: 1px solid rgb(218, 217, 217);border-radius: 20px;width: 95%;margin-left: 20px;height: auto;margin-bottom: 10px;" *ngFor="let group of groups">
-                    <div class="row g-0" style="margin-bottom: 10px;">
-                        <div class="col">
-                            <h2 style="margin-left: 10px;margin-top: 10px;">{{group['name']}}</h2>
-                            <h4 style="margin-left: 10px;margin-bottom: 2px;">{{group['bio']}}</h4>
-                            <p style="margin-left: 10px;margin-bottom: 20px;">created by: {{group['admin']['username']}}</p>
-                            <button (click)="join_group(group[ 'id'])" class="btn btn-success" style="background-color: green;margin-left: 10px;">Join Group</button>
-
-                        </div>
-                        <div class="col-lg-5">
-
-                        </div>
+                <div class="row">
+                    <div class="col">
+                        <h2 style="margin-top:20px;margin-left: 20px;">{{group['name']}}</h2>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-danger" style="margin-top: 20px;background-color: red;">Exit</button>
                     </div>
                 </div>
+                <div class="group-section" *ngFor="let message of messages" style="border: 1px solid rgb(218, 217, 217);border-radius: 20px;width: 95%;margin-left: 20px;height: auto;margin-bottom: 10px;">
+                    <div class="row g-0" style="background-color: #268B6A;border-radius: 10px;height: auto;">
+                        <p style="margin-left: 15px;padding-top: 10px;color: white;">{{message['reporter']['username']}}</p>
+                        <h2 style="margin-left: 15px;color: white;">{{message['text']}}</h2>
+                        <p style="text-align: right;padding-right: 10px;color: white;">{{message['time_sent'] | date}}</p>
+
+                    </div>
+                </div>
+                <app-groupchat [group]="group" (formSubmitEvent)="postMessage($event)"></app-groupchat>
 
             </div>
 
