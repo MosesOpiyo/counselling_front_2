@@ -21,6 +21,7 @@ import { GroupFormComponent } from './group-form/group-form.component';
 import { SpecificCounsellorComponent } from './specific-counsellor/specific-counsellor.component';
 import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     GroupFormComponent,
     SpecificCounsellorComponent,
     AboutComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    FooterComponent
   
   ],
   imports: [
