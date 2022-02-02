@@ -22,6 +22,7 @@ import { SpecificCounsellorComponent } from './specific-counsellor/specific-coun
 import { SpecificGroupComponent } from './specific-group/specific-group.component';
 import { GroupchatComponent } from './groupchat/groupchat.component';
 import { MessagesComponent } from './messages/messages.component';
+import { ClientMessageComponent } from './client-message/client-message.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MessagesComponent } from './messages/messages.component';
     SpecificCounsellorComponent,
     SpecificGroupComponent,
     GroupchatComponent,
-    MessagesComponent
+    MessagesComponent,
+    ClientMessageComponent
   
   ],
   imports: [

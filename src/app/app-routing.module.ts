@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
 import { ClientGroupsComponent } from './client-groups/client-groups.component';
+import { ClientMessageComponent } from './client-message/client-message.component';
 import { CounsellorClientsComponent } from './counsellor-clients/counsellor-clients.component';
 import { CounsellorDashboardComponent } from './counsellor-dashboard/counsellor-dashboard.component';
 import { CounsellorGroupsComponent } from './counsellor-groups/counsellor-groups.component';
@@ -30,7 +31,9 @@ const routes: Routes = [
   {path:'group_form',component:GroupFormComponent},
   {path:'counsellor',component:SpecificCounsellorComponent},
   {path:'group',component:SpecificGroupComponent},
-  {path:'messages',component:MessagesComponent}
+  {path:'messages',component:MessagesComponent},
+  {path:'client_messages',component:ClientMessageComponent}
+
 
 ];
 

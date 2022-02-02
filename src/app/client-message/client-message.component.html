@@ -10,7 +10,7 @@
                     <button class="nav-link active" aria-current="page" style="margin-left: 30px;">Home</button>
                     <button class="nav-link" routerLink="/client_dashboard">Activity</button>
                     <button class="nav-link">Groups</button>
-                    <a class="btn btn-primary">Clients</a>
+                    <a class="btn btn-primary">Counsellors</a>
                     <button class="nav-link">About</button>
                     <div class="card" style="background-color: black;width: 35px;height: 35px;margin-left: 850px;border-radius: 30px;"></div>
                     <a class="btn btn-danger" routerLink="" (click)="logout()" style="margin-left: 20px;">Logout</a>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="message-section" *ngFor="let message of messages" style="border: 1px solid rgb(218, 217, 217);border-radius: 20px;width: 95%;margin-left: 20px;height: auto;margin-bottom: 10px;">
                     <div class="row g-0" style="background-color: #268B6A;border-radius: 10px;height: auto;">
-                        <h2 style="margin-left: 15px;color: white;margin-top: 10px;">{{message.message}}</h2>
+                        <h2 style="margin-left: 15px;color: white; margin-top: 10px;">{{message.message}}</h2>
                         <p style="text-align: right;padding-right: 10px;color: white;">date</p>
                     </div>
                 </div>

@@ -119,6 +119,12 @@ export class AccountService {
     })
     return this.http.get(`${environment.BASE_URL}counsultion/client_group`,{'headers':headers})
   }
+  getClients(pk:any){
+    let headers = new HttpHeaders({
+      'Authorization':`Token ${sessionStorage.getItem('token')}`
+    })
+    return this.http.get(`${environment.BASE_URL}counsultion/my_clients/${pk}`,{'headers':headers})
+  }
   joinGroup(id:number){
     let headers = new HttpHeaders({
       'Authorization':`Token ${sessionStorage.getItem('token')}`
@@ -138,7 +144,7 @@ export class AccountService {
     return this.http.get(`${environment.BASE_URL}counsultion/group_chat/${pk}`,{"headers":headers})  
 
   }
-  
+
   logout(){
     sessionStorage.removeItem('token')
     this.auth.authentication(false)

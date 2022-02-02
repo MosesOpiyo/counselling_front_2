@@ -9,6 +9,7 @@ import { AccountService } from '../accountservice/accountservice.service';
 export class CounsellorClientsComponent implements OnInit {
 
   user:any
+  clients:any
   constructor(private accountservice:AccountService) { }
 
   logout(){
@@ -18,6 +19,11 @@ export class CounsellorClientsComponent implements OnInit {
   ngOnInit(): void {
     this.accountservice.counsellor_profile().subscribe((response:any)=>{
       this.user = response['user']
+
+      this.accountservice.getClients(this.user.id).subscribe((response:any)=>{
+        this.clients = response['clients']
+        console.log(this.clients)
+      })
     })
   }
 }

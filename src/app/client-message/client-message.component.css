@@ -1,0 +1,15 @@
+button {
+    border: none;
+    background-color: transparent;
+}
+
+input {
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 5vh;
+    background-color: #B7D1D0;
+    border: 2px solid #B7D1D0;
+    margin-bottom: 50px;
+    border-radius: 20px;
+}
