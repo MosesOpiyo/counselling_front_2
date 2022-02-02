@@ -138,6 +138,7 @@ export class AccountService {
     return this.http.get(`${environment.BASE_URL}counsultion/group_chat/${pk}`,{"headers":headers})  
 
   }
+  
   logout(){
     sessionStorage.removeItem('token')
     this.auth.authentication(false)

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
 import { ClientGroupsComponent } from './client-groups/client-groups.component';
 import { CounsellorClientsComponent } from './counsellor-clients/counsellor-clients.component';
@@ -10,6 +11,7 @@ import { CounsellorOptionsComponent } from './counsellor-options/counsellor-opti
 import { CounsellorRegistrationComponent } from './counsellor-registration/counsellor-registration.component';
 import { GroupFormComponent } from './group-form/group-form.component';
 import { LoginComponent } from './login/login.component';
+import { MessagesComponent } from './messages/messages.component';
 import { SignupComponent } from './signup/signup.component';
 import { SpecificCounsellorComponent } from './specific-counsellor/specific-counsellor.component';
 import { SpecificGroupComponent } from './specific-group/specific-group.component';
@@ -27,7 +29,9 @@ const routes: Routes = [
   {path:'counsellors_client',component:CounsellorClientsComponent},
   {path:'group_form',component:GroupFormComponent},
   {path:'counsellor',component:SpecificCounsellorComponent},
-  {path:'group',component:SpecificGroupComponent}
+  {path:'group',component:SpecificGroupComponent},
+  {path:'messages',component:MessagesComponent}
+
 ];
 
 @NgModule({

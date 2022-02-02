@@ -21,6 +21,7 @@ import { GroupFormComponent } from './group-form/group-form.component';
 import { SpecificCounsellorComponent } from './specific-counsellor/specific-counsellor.component';
 import { SpecificGroupComponent } from './specific-group/specific-group.component';
 import { GroupchatComponent } from './groupchat/groupchat.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { GroupchatComponent } from './groupchat/groupchat.component';
     GroupFormComponent,
     SpecificCounsellorComponent,
     SpecificGroupComponent,
-    GroupchatComponent
+    GroupchatComponent,
+    MessagesComponent
   
   ],
   imports: [
