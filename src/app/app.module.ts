@@ -20,6 +20,7 @@ import { CounsellorClientsComponent } from './counsellor-clients/counsellor-clie
 import { GroupFormComponent } from './group-form/group-form.component';
 import { SpecificCounsellorComponent } from './specific-counsellor/specific-counsellor.component';
 import { AboutComponent } from './about/about.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AboutComponent } from './about/about.component';
     CounsellorClientsComponent,
     GroupFormComponent,
     SpecificCounsellorComponent,
-    AboutComponent
+    AboutComponent,
+    ContactUsComponent
   
   ],
   imports: [
