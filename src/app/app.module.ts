@@ -22,6 +22,8 @@ import { SpecificCounsellorComponent } from './specific-counsellor/specific-coun
 import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { FooterComponent } from './footer/footer.component';
     SpecificCounsellorComponent,
     AboutComponent,
     ContactUsComponent,
-    FooterComponent
+    FooterComponent,
+    HomepageComponent,
+    NavbarComponent
   
   ],
   imports: [
