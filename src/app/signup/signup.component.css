@@ -47,6 +47,7 @@ nav a{
   left: 0;
   height: 100%;
   width: 100%;
+  color: #ffff;
 }
 .cover .back{
   transform: rotateY(180deg);
@@ -212,6 +213,10 @@ form h3{
 }
 .container #flip{
   display: none;
+}
+.container .cover .front{
+  background-color: #ffff;
+
 }
 @media (max-width: 730px) {
   .container .cover{

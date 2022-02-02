@@ -6,7 +6,7 @@ input {
     width: 100%;
     height: 8vh;
     background-color: #B7D1D0;
-    border: 2px solid #B7D1D0;
+    border: 2px solid #7d2ae8;
     border-radius: 20px;
 }
 
@@ -18,11 +18,20 @@ label {
 button {
     width: 120px;
     border-radius: 20px;
-    background-color: #268B6A;
+    background-color: #7d2ae8;
     margin-bottom: 20px;
+    color: #ffff;
 }
 
 img {
     height: 95vh;
     border-radius: 30px;
+}
+.navbar-nav a:hover{
+    background: #7d2ae8;
+}
+.container {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    max-height: 100vh;
 }
