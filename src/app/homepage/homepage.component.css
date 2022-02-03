@@ -98,22 +98,22 @@ background: #c9f5ff;
     transition:transform .2s ease-in-out;
 }
 #what-we-do .card .block-1:before{
-    content: "\f486";
+    content: "\f00c";
 }
 #what-we-do .card .block-2:before{
-    content: "\f0eb";
+    content: "\f00c";
 }
 #what-we-do .card .block-3:before{
     content: "\f00c";
 }
 #what-we-do .card .block-4:before{
-    content: "\f486";
+    content: "\f00c";
 }
 #what-we-do .card .block-5:before{
-    content: "\f0a1";
+    content: "\f00c";
 }
 #what-we-do .card .block-6:before{
-    content: "\f0f9";
+    content: "\f00c";
 }
 #what-we-do .card:hover .card-block:before{
 	-webkit-transform: rotate(360deg);
