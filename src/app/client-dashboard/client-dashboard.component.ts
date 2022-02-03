@@ -10,6 +10,8 @@ import { AccountService } from '../accountservice/accountservice.service';
 export class ClientDashboardComponent implements OnInit {
   user:any
   role:any
+  group:any
+  messages:any
 
   constructor(private accountservice:AccountService,private route:Router) { }
 
@@ -21,7 +23,15 @@ export class ClientDashboardComponent implements OnInit {
     this.accountservice.client_profile().subscribe((response:any)=>{
       this.user = response['user']
     })
-    
+    this.accountservice.get_client_group().subscribe((response:any)=>{
+      this.group = response['group']
+      this.accountservice.getGroupMessages(this.group.id).subscribe((response:any) =>{
+        this.messages = response
+        console.log(this.messages)
+    },error =>{
+        console.log(error)
+    })
+    })
   }
 
 }
