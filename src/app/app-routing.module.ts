@@ -13,6 +13,7 @@ import { CounsellorOptionsComponent } from './counsellor-options/counsellor-opti
 import { CounsellorRegistrationComponent } from './counsellor-registration/counsellor-registration.component';
 import { GroupFormComponent } from './group-form/group-form.component';
 import { HomeHelpSearchComponent } from './home-help-search/home-help-search.component';
+import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { MessagesComponent } from './messages/messages.component';
 import { SignupComponent } from './signup/signup.component';
@@ -20,7 +21,8 @@ import { SpecificCounsellorComponent } from './specific-counsellor/specific-coun
 import { SpecificGroupComponent } from './specific-group/specific-group.component';
 
 const routes: Routes = [
-  {path:'',component:SignupComponent},
+  {path:'',component:HomepageComponent},
+  {path:'signup',component:SignupComponent},
   {path:'login',component:LoginComponent},
   {path:'client_dashboard',component:ClientDashboardComponent},
   {path:'home',component:HomeHelpSearchComponent},
@@ -36,8 +38,8 @@ const routes: Routes = [
   {path:'group',component:SpecificGroupComponent},
   {path:'messages',component:MessagesComponent},
   {path:'client_messages',component:ClientMessageComponent},
-  {path:'appointment',component:AppointmentComponent}
-
+  {path:'appointment',component:AppointmentComponent},
+ 
 
 ];
 

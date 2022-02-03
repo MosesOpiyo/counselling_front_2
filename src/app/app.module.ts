@@ -25,6 +25,9 @@ import { MessagesComponent } from './messages/messages.component';
 import { ClientMessageComponent } from './client-message/client-message.component';
 import { HomeHelpSearchComponent } from './home-help-search/home-help-search.component';
 import { AppointmentComponent } from './appointment/appointment.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { AppointmentComponent } from './appointment/appointment.component';
     MessagesComponent,
     ClientMessageComponent,
     HomeHelpSearchComponent,
-    AppointmentComponent
+    AppointmentComponent,
+    NavbarComponent,
+    HomepageComponent,
+    FooterComponent
   
   ],
   imports: [

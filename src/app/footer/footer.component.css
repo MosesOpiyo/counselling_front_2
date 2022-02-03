@@ -1,0 +1,18 @@
+#footer {
+    margin-bottom: 10%;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    /* background: rgba(30, 0, 255, 0.05); */
+}
+
+.cc-facebook:hover {
+    background: green;
+}
+
+.cc-instagram:hover {
+    background: green;
+}
+
+.cc-twitter:hover {
+    background: green;
+}
