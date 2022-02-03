@@ -26,3 +26,6 @@ img {
     height: 85vh;
     border-radius: 30px;
 }
+.navbar-nav a:hover{
+    background: #B7D1D0;
+}
