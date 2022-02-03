@@ -13,6 +13,7 @@ export class ClientDashboardComponent implements OnInit {
   role:any
   group:any
   messages:any
+  counsellor:any
   cloudinary = environment.CLOUDINARY_URL
   constructor(private accountservice:AccountService,private route:Router) { }
 
@@ -24,6 +25,10 @@ export class ClientDashboardComponent implements OnInit {
     this.accountservice.client_profile().subscribe((response:any)=>{
       this.user = response['user']
       console.log(this.user)
+    })
+    this.accountservice.clientsCounsellor().subscribe((response:any)=>{
+      this.counsellor = response["counsellor"]
+      console.log(this.counsellor)
     })
     this.accountservice.get_client_group().subscribe((response:any)=>{
       this.group = response['group']
