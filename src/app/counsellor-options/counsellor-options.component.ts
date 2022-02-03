@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AccountService } from '../accountservice/accountservice.service';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -14,6 +15,7 @@ export class CounsellorOptionsComponent implements OnInit {
   user:any
   counsellors:any
   counsellor:any
+  cloudinary = environment.CLOUDINARY_URL
 
   join_counsellor(id:number){
     this.accountservice.joinCounsellor(id).subscribe(response =>{

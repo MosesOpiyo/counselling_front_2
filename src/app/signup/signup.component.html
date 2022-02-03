@@ -27,7 +27,10 @@
                     <br>
                     <input type="password" id="password " [(ngModel)]="password" class="form-control" name="password" placeholder="password">
                     <br>
-                    <button class="btn btn-succes" type="submit ">Sign up</button>
+                    <label for="">Post your Profile picture</label>
+                    <input style="width: 35%;height: 6vh;" type="file" id="profile_pic " (change)="onImageChange($event)" class="form-control" name="profile_pic" placeholder="password">
+                    <br>
+                    <button class="btn btn-succes" type="submit">Sign up</button>
                     <p class="clo-lg-5 text-center py-5">Have an account?<br><a routerLink="login">Login</a></p>
                 </form>
             </div>

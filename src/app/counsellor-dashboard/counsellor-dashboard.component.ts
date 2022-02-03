@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../accountservice/accountservice.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-counsellor-dashboard',
@@ -9,6 +10,9 @@ import { AccountService } from '../accountservice/accountservice.service';
 export class CounsellorDashboardComponent implements OnInit {
 
   user:any
+  appointments:any
+  cloudinary = environment.CLOUDINARY_URL
+
   constructor(private accountservice:AccountService) { }
 
   logout(){
@@ -18,7 +22,13 @@ export class CounsellorDashboardComponent implements OnInit {
   ngOnInit(): void {
     this.accountservice.counsellor_profile().subscribe((response:any)=>{
       this.user = response['user']
+      console.log(this.user) 
     })
+    this.accountservice.get_client_appointment().subscribe((response:any)=>{
+      this.appointments = response['appointments']
+      console.log(this.appointments)
+    })
+  
   }
 
 }

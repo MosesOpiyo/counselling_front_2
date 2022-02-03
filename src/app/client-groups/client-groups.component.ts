@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AccountService } from '../accountservice/accountservice.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-client-groups',
@@ -13,6 +14,8 @@ export class ClientGroupsComponent implements OnInit {
   user:any
   groups:any
   group:any
+  cloudinary = environment.CLOUDINARY_URL
+
   constructor(private accountservice:AccountService ,private matsnackbar:MatSnackBar,private route:Router) { }
 
   logout(){

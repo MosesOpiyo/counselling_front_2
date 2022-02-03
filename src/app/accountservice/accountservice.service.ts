@@ -29,7 +29,7 @@ export class AccountService {
   register(credentials:any){
     this.http.post(`${environment.BASE_URL}accounts/register`,credentials).subscribe(response=>{
       this.snackbar.open(`Congratulations ${credentials.get('username')}, your account was successfully created`,"Thank you")
-      this.route.navigate([''])
+      this.route.navigate(['login'])
     },error => {
       this.snackbar.open(`There was a problem creating your account, please check your credentials and try again.`,"Dismiss",{duration:3000})
       console.log(error)
@@ -55,6 +55,7 @@ export class AccountService {
       console.log(error)
     })
   }
+  
   counsellor_details(credentials:any){
     this.http.post(`${environment.BASE_URL}counsultion/counsellor_details`,credentials).subscribe(response=>{
       this.snackbar.open(`Additional details for ${credentials.get('first_name')}, have been successfully added`)
@@ -143,6 +144,25 @@ export class AccountService {
       })
     return this.http.get(`${environment.BASE_URL}counsultion/group_chat/${pk}`,{"headers":headers})  
 
+  }
+  createAppointment(group:FormGroup){
+    let headers = new HttpHeaders({
+      'Authorization':`Token ${sessionStorage.getItem('token')}`
+    })
+
+    this.http.post(`${environment.BASE_URL}counsultion/appointment`,group.value,{'headers':headers}).subscribe(response=>{
+      this.snackbar.open(`appointment has been successfully created`,"Thank you",{duration:3000})
+      this.route.navigate(['client_dashboard'])
+    },error =>{
+      this.snackbar.open(`There was a problem creating the appointment`,"Alright",{duration:3000})
+      console.log(error)
+    })
+  }
+  get_client_appointment(){
+    let headers = new HttpHeaders({
+      'Authorization':`Token ${sessionStorage.getItem('token')}`
+    })
+    return this.http.get(`${environment.BASE_URL}counsultion/get_appointment`,{'headers':headers})
   }
 
   logout(){

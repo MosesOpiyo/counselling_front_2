@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppointmentComponent } from './appointment/appointment.component';
 
 import { ClientDashboardComponent } from './client-dashboard/client-dashboard.component';
 import { ClientGroupsComponent } from './client-groups/client-groups.component';
@@ -34,7 +35,8 @@ const routes: Routes = [
   {path:'counsellor',component:SpecificCounsellorComponent},
   {path:'group',component:SpecificGroupComponent},
   {path:'messages',component:MessagesComponent},
-  {path:'client_messages',component:ClientMessageComponent}
+  {path:'client_messages',component:ClientMessageComponent},
+  {path:'appointment',component:AppointmentComponent}
 
 
 ];

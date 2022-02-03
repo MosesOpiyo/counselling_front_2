@@ -24,6 +24,7 @@ import { GroupchatComponent } from './groupchat/groupchat.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ClientMessageComponent } from './client-message/client-message.component';
 import { HomeHelpSearchComponent } from './home-help-search/home-help-search.component';
+import { AppointmentComponent } from './appointment/appointment.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { HomeHelpSearchComponent } from './home-help-search/home-help-search.com
     GroupchatComponent,
     MessagesComponent,
     ClientMessageComponent,
-    HomeHelpSearchComponent
+    HomeHelpSearchComponent,
+    AppointmentComponent
   
   ],
   imports: [

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { AccountService } from '../accountservice/accountservice.service';
 import { DomSanitizer,SafeResourceUrl } from '@angular/platform-browser';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home-help-search',
@@ -14,6 +15,7 @@ export class HomeHelpSearchComponent implements OnInit {
   isLoading:Boolean;
   error:string = '';
   response:any = {};
+  cloudinary = environment.CLOUDINARY_URL
 
   search:any = {keyword:"",maxResults: 50};
 
