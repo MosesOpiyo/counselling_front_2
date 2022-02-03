@@ -84,3 +84,6 @@ header{
     width: 80%;
     margin: auto;
 }
+.card-body a {
+    background: #5545CD;
+}
