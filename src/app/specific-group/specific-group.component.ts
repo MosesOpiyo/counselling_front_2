@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { AccountService } from '../accountservice/accountservice.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-specific-group',
@@ -12,6 +13,8 @@ export class SpecificGroupComponent implements OnInit {
   group:any
   user:any
   messages:any
+  
+  cloudinary = environment.CLOUDINARY_URL
 
   postMessage(event:FormData){
 

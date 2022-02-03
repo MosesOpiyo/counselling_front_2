@@ -9,8 +9,8 @@
                 <div class="navbar-nav">
                     <a class="btn btn-primary" aria-current="page" style="margin-left: 30px;">Home</a>
                     <button class="nav-link" routerLink="/client_dashboard">Activity</button>
-                    <button class="nav-link">Groups</button>
-                    <button class="nav-link">Counsellors</button>
+                    <button class="nav-link" routerLink="/client_groups">Groups</button>
+                    <button class="nav-link" routerLink="/counsellor">Counsellors</button>
                     <img style="width: 35px;height: 35px;margin-left: 850px;border-radius: 30px;" src="{{cloudinary}}{{user['profile_pic']}}" alt="">
                     <a class="btn btn-danger" routerLink="" (click)="logout()" style="margin-left: 20px;">Logout</a>
                 </div>

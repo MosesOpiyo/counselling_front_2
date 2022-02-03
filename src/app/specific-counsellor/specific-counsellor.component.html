@@ -11,7 +11,7 @@
                     <button class="nav-link" routerLink="/client_dashboard">Activity</button>
                     <button class="nav-link" routerLink="/client_groups">Groups</button>
                     <a class="btn btn-primary">Counsellors</a>
-                    <div class="card" style="background-color: black;width: 35px;height: 35px;margin-left: 850px;border-radius: 30px;"></div>
+                    <img style="width: 35px;height: 35px;margin-left: 850px;border-radius: 30px;" src="{{cloudinary}}{{user['profile_pic']}}" alt="">
                     <a class="btn btn-danger" routerLink="" (click)="logout()" style="margin-left: 20px;">Logout</a>
                 </div>
             </div>
@@ -20,9 +20,7 @@
     <div class="container mt-5 pt-5">
         <div class="row g-0">
             <div class="col-lg-3">
-                <div class="card" style="width: 15pc;height:15pc;border-radius: 50%;background-color: black;">
-
-                </div>
+                <img style="width: 15pc;height:15pc;border-radius: 50%;" src="{{cloudinary}}{{counsellor['user']['profile_pic']}}" alt="">
                 <h1 style="margin-top: 7%;">{{counsellor['user']['username']}}</h1>
                 <h3 style="margin-top: 2%;">{{counsellor['user']['email']}}</h3>
                 <h3 style="margin-top: 2%;">Date joined: {{counsellor['user']['date_joined'] | date}}</h3>
@@ -42,28 +40,28 @@
                             <div class="card">
                                 <h2 style="margin-left: 20px;">Qualities</h2>
                                 <hr style="width: 90%;margin-left: 10px;">
-                                <p style="margin-left: 5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                                    make a type specimen book. </p>
+                                <p style="margin-left: 5px;">My qualities include: Possession of a sophisticated set of interpersonal skills,Ability to help you feel you can trust me and <br> Willingness to establish an alliance with you</p>
                             </div>
                         </div>
                         <div class="col-lg-5" style="margin-left: 20px;height: auto;">
                             <div class="card">
                                 <h2 style="margin-left: 20px;">Work Experience</h2>
                                 <hr style="width: 90%;margin-left: 10px">
-                                <p style="margin-left: 5px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                                    make a type specimen book. </p>
+                                <p style="margin-left: 5px;">I have had experience with patients with bad mental issues. Gviving them brotherly care,listening to their problems and <br> being with them until they fully recovered</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="counsellor-groups">
-                    <h1 style="margin-left: 30px;">Groups</h1>
-                    <div class="groups" style="border: 1px solid rgb(218, 217, 217);width: 95%;margin-left: 20px;height: auto;border-radius: 20px;">
-                        <h3 style="margin-left: 20px;">Name</h3>
-                        <h3 style="margin-left: 20px;">Bio</h3>
-                        <p style="margin-left: 20px;">admin</p>
-                    </div>
+                    <h1 style="margin-left: 30px;">Group</h1>
+                    <div class="counsellor-group">
+                        <div class="groups" style="border: 1px solid rgb(218, 217, 217);width: 95%;margin-left: 20px;height: auto;border-radius: 20px;background-color: blue;">
+                            <h2 style="margin-left: 20px;margin-top: 20px;color: white;">{{group.name}}</h2>
+                            <h3 style="margin-left: 20px;color: white;">{{group.bio}}</h3>
+                            <p style="margin-left: 20px;color: white;">Created by your Counsellor</p>
+                        </div>
 
+                    </div>
                 </div>
 
 
