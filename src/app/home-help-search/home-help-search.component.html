@@ -7,10 +7,10 @@
           </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <button class="nav-link active" aria-current="page" routerLink="/home" style="margin-left: 30px;">Home</button>
+                    <a class="btn btn-primary" aria-current="page" style="margin-left: 30px;">Home</a>
                     <button class="nav-link" routerLink="/client_dashboard">Activity</button>
-                    <button class="nav-link" routerLink="/client_groups">Groups</button>
-                    <a class="btn btn-primary">Counsellors</a>
+                    <button class="nav-link">Groups</button>
+                    <button class="nav-link">Counsellors</button>
                     <button class="nav-link">About</button>
                     <div class="card" style="background-color: black;width: 35px;height: 35px;margin-left: 850px;border-radius: 30px;"></div>
                     <a class="btn btn-danger" routerLink="" (click)="logout()" style="margin-left: 20px;">Logout</a>
@@ -36,28 +36,39 @@
                 </div>
             </div>
             <div class="col-lg-8" style="border: 1px solid rgb(218, 217, 217);border-radius: 40px;height: auto;">
-                <h3 style="margin-top:20px;margin-left: 20px;">Counsellors</h3>
-                <div class="counsellors" *ngFor="let counsellor of counsellors; let i = index" style="border: 1px solid rgb(218, 217, 217);border-radius: 20px;width: 95%;margin-left: 20px;height: auto;margin-bottom: 10px;">
-                    <a style="text-decoration: none;color: black;">
-                        <div class="row g-0">
-                            <div class="row" style="margin-top: 20px;margin-bottom: 20px;">
-                                <div class="col-lg-2">
-                                    <div class="card" style="width: 70px;height: 70px;background:linear-gradient(green,blue);border-radius: 50px;margin-top: 20px;"></div>
+                <h2 style="margin-top:20px;margin-left: 20px;">You also have access to video content.</h2>
+                <div class="row">
+                    <div class="col">
+                        <input [(ngModel)]="search.keyword" type="text">
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-success" (click)="searchYoutube()" style="margin-top: 30px;background-color: #268B6A;">Search</button>
+                    </div>
+                </div>
+                <div class="youtube-content">
+                    <div class="row" *ngIf="isLoading">
+                        <div class="spinner-border text-danger" style="margin-left: 35px;margin-top:10px;">
+                            <span class="visually-hiiden"></span>
+                        </div>
+                    </div>
+                    <div class="row" *ngIf="!isLoading && error">
+                        <p class="text-danger">Error: {{error}}</p>
+                    </div>
+                    <div class="row g-0" *ngIf="!isLoading">
+                        <div class="col-lg-5" *ngFor="let item of response.items; let i-index">
+                            <div class="card-h-100" style="padding-left: 30px;padding-top: 40px;">
+                                <div class="ratio ratio-4x3">
+                                    <iframe class="embed-responsive-item" [src]="getVideoSource(item.id.videoId)" allowfullscreen></iframe>
                                 </div>
-                                <div class="col-lg-5" style="margin-top: 15px;">
-                                    <h2>{{counsellor['user']['username']}}</h2>
-                                    <p>{{counsellor['user']['email']}}</p>
-                                    <p>date_joined: {{counsellor['user']['date_joined'] | date}}</p>
-                                    <p>Qualities:{{counsellor['details']['qualities']}}</p>
-                                    <p>Work Experience: {{counsellor['details']['experiences']}}</p>
-                                </div>
-                                <div class="col-lg-5">
-                                    <button class="btn btn-success" (click)="join_counsellor(counsellor[ 'id'])" style="background-color: green;margin-top: 15px;">Get in contact</button>
+                                <div class="card-body">
+                                    <h4 class="card-title text-truncate">{{item.snippet.title}}</h4>
                                 </div>
                             </div>
-
                         </div>
-                    </a>
+
+                    </div>
+
+
                 </div>
 
             </div>

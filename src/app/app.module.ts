@@ -23,6 +23,7 @@ import { SpecificGroupComponent } from './specific-group/specific-group.componen
 import { GroupchatComponent } from './groupchat/groupchat.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ClientMessageComponent } from './client-message/client-message.component';
+import { HomeHelpSearchComponent } from './home-help-search/home-help-search.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ClientMessageComponent } from './client-message/client-message.componen
     SpecificGroupComponent,
     GroupchatComponent,
     MessagesComponent,
-    ClientMessageComponent
+    ClientMessageComponent,
+    HomeHelpSearchComponent
   
   ],
   imports: [

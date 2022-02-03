@@ -32,7 +32,7 @@ export class CounsellorOptionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.accountservice.counsellor_profile().subscribe((response:any)=>{
+    this.accountservice.client_profile().subscribe((response:any)=>{
       this.user = response['user']
     })
     this.accountservice.getCounsellors().subscribe((response:any)=>{

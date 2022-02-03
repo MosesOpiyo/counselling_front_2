@@ -31,7 +31,7 @@ export class SpecificGroupComponent implements OnInit {
   constructor(private accountservice:AccountService,private matsnackbar:MatSnackBar) { }
 
   ngOnInit(): void {
-    this.accountservice.counsellor_profile().subscribe((response:any)=>{
+    this.accountservice.client_profile().subscribe((response:any)=>{
       this.user = response['user']
     })
     this.accountservice.get_client_group().subscribe((response:any)=>{

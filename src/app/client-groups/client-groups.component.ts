@@ -29,7 +29,7 @@ export class ClientGroupsComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.accountservice.counsellor_profile().subscribe((response:any)=>{
+    this.accountservice.client_profile().subscribe((response:any)=>{
       this.user = response['user']
     })
     this.accountservice.getGroups().subscribe((response:any)=>{

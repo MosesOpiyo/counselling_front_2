@@ -1,0 +1,14 @@
+button {
+    border: none;
+    background-color: transparent;
+}
+
+input {
+    width: 95%;
+    height: 5vh;
+    background-color: #B7D1D0;
+    border: 2px solid #B7D1D0;
+    margin-top: 30px;
+    margin-left: 20px;
+    border-radius: 20px;
+}

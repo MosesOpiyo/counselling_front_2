@@ -11,6 +11,7 @@ import { CounsellorLoginComponent } from './counsellor-login/counsellor-login.co
 import { CounsellorOptionsComponent } from './counsellor-options/counsellor-options.component';
 import { CounsellorRegistrationComponent } from './counsellor-registration/counsellor-registration.component';
 import { GroupFormComponent } from './group-form/group-form.component';
+import { HomeHelpSearchComponent } from './home-help-search/home-help-search.component';
 import { LoginComponent } from './login/login.component';
 import { MessagesComponent } from './messages/messages.component';
 import { SignupComponent } from './signup/signup.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'',component:SignupComponent},
   {path:'login',component:LoginComponent},
   {path:'client_dashboard',component:ClientDashboardComponent},
+  {path:'home',component:HomeHelpSearchComponent},
   {path:'counsellor_options',component:CounsellorOptionsComponent},
   {path:'client_groups',component:ClientGroupsComponent},
   {path:'counsellor_registration',component:CounsellorRegistrationComponent},
