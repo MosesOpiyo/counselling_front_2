@@ -11,8 +11,8 @@
                     <button class="nav-link" routerLink="/client_dashboard">Activity</button>
                     <button class="nav-link" routerLink="/client_groups">Groups</button>
                     <a class="btn btn-primary">Counsellors</a>
-                    <img style="width: 35px;height: 35px;margin-left: 850px;border-radius: 30px;" src="{{cloudinary}}{{user['profile_pic']}}" alt="">
-                    <a class="btn btn-danger" routerLink="" (click)="logout()" style="margin-left: 20px;">Logout</a>
+
+                    <a class="btn btn-danger" routerLink="" (click)="logout()" <img style="width: 35px;height: 35px;margin-left: 850px;border-radius: 30px;" src="{{cloudinary}}{{user['profile_pic']}}" alt=""> style="margin-left: 20px;">Logout</a>
                 </div>
             </div>
         </div>
@@ -41,7 +41,8 @@
                         <div class="row g-0">
                             <div class="row" style="margin-top: 20px;margin-bottom: 20px;">
                                 <div class="col-lg-2">
-                                    <div class="card" style="width: 70px;height: 70px;background:linear-gradient(green,blue);border-radius: 50px;margin-top: 20px;"></div>
+                                    <div class="card"></div>
+                                    <img style="width: 70px;height: 70px;border-radius: 50px;margin-top: 20px;" src="{{cloudinary}}{{counsellor['user']['profile_pic']}}" alt="">
                                 </div>
                                 <div class="col-lg-5" style="margin-top: 15px;">
                                     <h2>{{counsellor['user']['username']}}</h2>
