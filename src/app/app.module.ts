@@ -28,6 +28,7 @@ import { AppointmentComponent } from './appointment/appointment.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FooterComponent } from './footer/footer.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { FooterComponent } from './footer/footer.component';
     AppointmentComponent,
     NavbarComponent,
     HomepageComponent,
-    FooterComponent
+    FooterComponent,
+    AboutUsComponent
   
   ],
   imports: [
