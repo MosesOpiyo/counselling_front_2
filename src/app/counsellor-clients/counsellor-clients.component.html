@@ -10,7 +10,7 @@
                     <button class="nav-link" routerLink="/counsellor_dashboard">Activity</button>
                     <button class="nav-link" routerLink="/counsellor_groups">Groups</button>
                     <a class="btn btn-primary">Clients</a>
-                    <div class="card" style="background:linear-gradient(red,blue);width: 35px;height: 35px;margin-left: 850px;border-radius: 30px;"></div>
+                    <img style="width: 35px;height: 35px;margin-left: 850px;border-radius: 30px;" src="{{cloudinary}}{{user['profile_pic']}}" alt="">
                     <a class="btn btn-danger" routerLink="" (click)="logout()" style="margin-left: 20px;">Logout</a>
                 </div>
             </div>
@@ -19,9 +19,7 @@
     <div class="container mt-5 pt-5">
         <div class="row g-0">
             <div class="col-lg-3">
-                <div class="card" style="width: 15pc;height:15pc;border-radius: 50%;background:linear-gradient(red,blue);">
-
-                </div>
+                <img style="width: 15pc;height:15pc;border-radius: 50%;" src="{{cloudinary}}{{user['profile_pic']}}" alt="">
                 <h1 style="margin-top: 7%;">{{user['username']}}</h1>
                 <h3 style="margin-top: 2%;">Date joined: {{user['date_joined'] | date}}</h3>
                 <a class="btn btn-success" style="width: 15pc;" routerLink="/consellor_specifics">Edit Profile</a>

@@ -27,6 +27,9 @@
                     <br>
                     <input style="margin-bottom: 50px;" [(ngModel)]="password" input id="password" name="password" placeholder="enter your password" class="form-control" type="password" required>
                     <br>
+                    <label for="">Post your Profile picture</label>
+                    <input style="width: 35%;height: 6vh;" type="file" id="profile_pic " (change)="onImageChange($event)" class="form-control" name="profile_pic" placeholder="password">
+                    <br>
                     <button class="btn btn-succes" type="submit">Sign up</button>
                     <br>
                     <p class="clo-lg-5 text-center py-5 ">Already a counsellor?<br><a routerLink="/counsellor_login">Login</a></p>

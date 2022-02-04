@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../accountservice/accountservice.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-counsellor-groups',
@@ -10,7 +11,7 @@ export class CounsellorGroupsComponent implements OnInit {
 
   user:any
   groups:any
-
+  cloudinary = environment.CLOUDINARY_URL
 
   constructor(private accountservice:AccountService) { }
 
